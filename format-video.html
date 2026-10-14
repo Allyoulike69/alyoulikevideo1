@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Format Entri → daftar.json</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(1200px 600px at 50% -100px, #1c1022 0%, #0a0a0a 55%) fixed, #0a0a0a;
+      color: #eee;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 22px;
+      letter-spacing: .5px;
+      padding-left: 10px;
+      border-left: 4px solid #a200f9;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .topnav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 12px 0;
+      margin: 14px 0 4px;
+      border-bottom: 1px solid #222;
+    }
+
+    .topnav button {
+      margin: 0;
+    }
+
+    .topnav.links a {
+      background: linear-gradient(180deg, #262626, #1b1b1b);
+      border: 1px solid #3a3a3a;
+      color: #fff;
+      text-decoration: none;
+      padding: 9px 16px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: transform .15s, box-shadow .15s, border-color .15s;
+    }
+
+    .topnav.links a:hover {
+      border-color: #a200f9;
+      box-shadow: 0 0 12px rgba(162, 0, 249, .35);
+      transform: translateY(-1px);
+    }
+
+    .topnav.links a.red {
+      background: linear-gradient(180deg, #b44dff, #7d00bf);
+      border-color: #a200f9;
+    }
+
+    .topnav.links a.red:hover {
+      box-shadow: 0 0 14px rgba(162, 0, 249, .5);
+    }
+
+    .panel {
+      border: 1px solid #333;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .015);
+      padding: 6px 18px 22px;
+      margin-top: 4px;
+    }
+
+    label {
+      display: block;
+      margin: 14px 0 6px;
+      font-weight: 700;
+      font-size: 14px;
+      color: #ddd;
+    }
+
+    input[type=text],
+    textarea,
+    select {
+      width: 100%;
+      background: #141414;
+      border: 1px solid #333;
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 14px;
+      transition: border-color .15s, box-shadow .15s;
+    }
+
+    input[type=text]:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #a200f9;
+      box-shadow: 0 0 10px rgba(162, 0, 249, .25);
+    }
+
+    textarea {
+      min-height: 90px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 12px;
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    button {
+      background: linear-gradient(180deg, #b44dff, #7d00bf);
+      border: 1px solid #a200f9;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 10px 5px 0 0;
+      transition: box-shadow .15s, transform .15s;
+    }
+
+    button:hover {
+      box-shadow: 0 0 12px rgba(162, 0, 249, .4);
+      transform: translateY(-1px);
+    }
+
+    button.ghost {
+      background: linear-gradient(180deg, #2a2a2a, #1d1d1d);
+      border: 1px solid #3a3a3a;
+    }
+
+    button.ghost:hover {
+      border-color: #a200f9;
+      box-shadow: 0 0 10px rgba(162, 0, 249, .25);
+    }
+
+    button.green {
+      background: linear-gradient(180deg, #1f9d4d, #146c33);
+      border: 1px solid #1f9d4d;
+    }
+
+    pre {
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 12px;
+      white-space: pre-wrap;
+      word-break: break-all;
+      font-size: 12px;
+      max-height: 320px;
+      overflow: auto;
+    }
+
+    .info {
+      color: #ffa74e;
+      font-size: 14px;
+    }
+
+    .warn {
+      color: #ff5555;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .ok {
+      color: #4dff88;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <h1>Format Entri → daftar.json</h1>
+    </div>
+    <nav class="topnav links">
+      <a href="dash/index.html">Home</a>
+      <a href="index.html" target="_blank" rel="noopener">Lihat Situs</a>
+      <a href="dash/statistik.html" target="_blank" rel="noopener">Dashboard Statistik</a>
+      <a class="red" href="format-video.html">Format Video</a>
+      <a href="format-id-video.html" target="_blank" rel="noopener">Format ID Video</a>
+    </nav>
+    <div class="panel">
+      <p class="info">Isi form → Preview → Salin Entry → tempel ke <b>p/daftar.json</b> di dalam "pages": [...]. Link harus sama persis dengan key di id-video.json.</p>
+
+      <label for="selFile">File target</label>
+      <select id="selFile">
+        <option value="daftar.json">daftar.json</option>
+        <option value="daftar2.json">daftar2.json</option>
+        <option value="daftar3.json">daftar3.json</option>
+        <option value="daftar4.json">daftar4.json</option>
+        <option value="daftar5.json">daftar5.json</option>
+      </select>
+      <div id="fileInfo" class="info"></div>
+
+      <label for="rawPaste">Tempel mentah (hasil copy dari situs — title, score, studio, tags, synopsis, episodes)</label>
+      <textarea id="rawPaste" style="min-height:140px" placeholder="Sister Breeder OVA&#10;Score&#10;8.5&#10;Views&#10;394,706&#10;Episodes&#10;6&#10;..."></textarea>
+      <button id="btnParse">Petakan Otomatis ke Form</button>
+      <span id="parseMsg" class="info"></span>
+
+      <div class="grid">
+        <div><label>Title</label><input type="text" id="f_title" placeholder="Sister Breeder [Sub-ENG]"></div>
+        <div><label>Link (otomatis dari title, bisa edit)</label><input type="text" id="f_link" placeholder="Sister Breeder.html"></div>
+        <div><label>Image / poster</label><input type="text" id="f_image" placeholder="https://..."></div>
+        <div><label>Rating</label><input type="text" id="f_rating" placeholder="8.4"></div>
+      </div>
+      <div><label>Genre (pisah koma)</label><input type="text" id="f_genre" placeholder="Ahegao, Harem, School Girls"></div>
+      <div><label>Sinopsis</label><textarea id="f_sinopsis" placeholder="Tulis sinopsis..."></textarea></div>
+      <div class="grid">
+        <div><label>Studio</label><input type="text" id="f_studio" placeholder="Bunnywalker"></div>
+        <div><label>Episode (harus = jumlah videoIds)</label><input type="text" id="f_episode" placeholder="4"></div>
+        <div><label>First air date</label><input type="text" id="f_first" placeholder="Oct. 2, 2025"></div>
+        <div><label>Last air date</label><input type="text" id="f_last" placeholder="Mar. 1, 2026"></div>
+        <div><label>Status</label>
+          <select id="f_status">
+            <option value="Completed" selected>Completed</option>
+            <option value="Ongoing">Ongoing</option>
+          </select>
+        </div>
+        <div><label>Tanggal upload (ISO)</label><input type="text" id="f_date" placeholder="2026-10-14T20:00:00"></div>
+        <div><label>Lengkap</label>
+          <select id="f_lengkap">
+            <option value="yes" selected>yes (tampil)</option>
+            <option value="-">- (sembunyi)</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="dupWarn" class="warn"></div>
+      <span id="msg" class="ok"></span>
+
+      <label>Preview entry baru</label>
+      <pre id="outEntry">...</pre>
+      <button id="btnCopyEntry">Salin Entry</button>
+      <button id="btnClearAll" class="ghost">Hapus Semua</button>
+      <div id="fileStat" class="info"></div>
+
+      <p class="info">URL cantik /p/&lt;Judul&gt; otomatis dilayani .htaccess + base.html — tidak perlu bikin file html per video.</p>
+    </div>
+
+  </div>
+
+  <script>
+    var selFile = document.getElementById('selFile');
+    var fileInfo = document.getElementById('fileInfo');
+    var msg = document.getElementById('msg');
+    var dupWarn = document.getElementById('dupWarn');
+    var outEntry = document.getElementById('outEntry');
+    var fileStat = document.getElementById('fileStat');
+    var F = function (id) { return document.getElementById(id); };
+    var current = [];
+
+    function defaultDate() {
+      var d = new Date();
+      function p(n) { return (n < 10 ? '0' : '') + n; }
+      return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + 'T20:00:00';
+    }
+
+    function autoLinkFromTitle() {
+      var t = F('f_title').value.trim();
+      if (!t) return F('f_link').value;
+      var base = t.replace(/\s*\[Sub-ENG\]\s*/gi, '').trim() || t;
+      return base + '.html';
+    }
+
+    var linkTouched = false;
+    F('f_link').addEventListener('input', function () { linkTouched = true; });
+    F('f_title').addEventListener('input', function () {
+      if (!linkTouched) F('f_link').value = autoLinkFromTitle();
+      renderAll();
+    });
+
+    function buildEntry() {
+      return {
+        title: F('f_title').value.trim(),
+        link: F('f_link').value.trim(),
+        image: F('f_image').value.trim(),
+        genre: F('f_genre').value.trim(),
+        rating: F('f_rating').value.trim(),
+        sinopsis: F('f_sinopsis').value.trim(),
+        studio: F('f_studio').value.trim(),
+        'First air date': F('f_first').value.trim(),
+        'Last air date': F('f_last').value.trim(),
+        episode: F('f_episode').value.trim(),
+        Status: F('f_status').value,
+        date: F('f_date').value.trim() || defaultDate(),
+        lengkap: F('f_lengkap').value
+      };
+    }
+
+    function renderAll() {
+      var e = buildEntry();
+      outEntry.textContent = JSON.stringify(e, null, 2);
+      var dup = null;
+      for (var i = 0; i < current.length; i++) {
+        var p = current[i];
+        if (e.link && p.link === e.link) { dup = 'link sama: ' + e.link; break; }
+        if (e.title && p.title === e.title) { dup = 'title sama: ' + e.title; break; }
+      }
+      dupWarn.textContent = dup ? ('PERINGATAN duplikat — ' + dup) : '';
+      fileStat.textContent = 'File ' + selFile.value + ': ' + current.length + ' entri.';
+    }
+
+    function loadFile() {
+      msg.textContent = '';
+      var name = selFile.value;
+      fileInfo.textContent = 'memuat ' + name + ' ...';
+      fetch('p/' + name + '?t=' + Date.now())
+        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(function (data) {
+          var arr = Array.isArray(data) ? data : (data.pages || []);
+          current = arr;
+          fileInfo.textContent = name + ' termuat: ' + current.length + ' entri.';
+          renderAll();
+        })
+        .catch(function (err) {
+          current = [];
+          fileInfo.textContent = name + ' gagal dimuat (' + err.message + ') — mulai dari kosong.';
+          renderAll();
+        });
+    }
+
+    ['f_title', 'f_link', 'f_image', 'f_genre', 'f_rating', 'f_sinopsis', 'f_studio', 'f_episode', 'f_first', 'f_last', 'f_date'].forEach(function (id) {
+      F(id).addEventListener('input', renderAll);
+    });
+    ['f_status', 'f_lengkap'].forEach(function (id) {
+      F(id).addEventListener('change', renderAll);
+    });
+    selFile.addEventListener('change', loadFile);
+
+    function copyText(txt, doneMsg) {
+      function done() { msg.textContent = doneMsg; }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).then(done, function () { fallback(); });
+      } else { fallback(); }
+      function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = txt;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) { }
+        document.body.removeChild(ta);
+      }
+    }
+
+    F('btnCopyEntry').addEventListener('click', function () {
+      copyText(JSON.stringify(buildEntry(), null, 2), 'entry tersalin! Tempel ke dalam "pages": [...]');
+    });
+
+    F('btnClearAll').addEventListener('click', function () {
+      ['f_title', 'f_link', 'f_image', 'f_genre', 'f_rating', 'f_sinopsis', 'f_studio', 'f_episode', 'f_first', 'f_last', 'f_date'].forEach(function (id) { F(id).value = ''; });
+      F('rawPaste').value = '';
+      F('parseMsg').textContent = '';
+      linkTouched = false;
+      msg.textContent = '';
+      dupWarn.textContent = '';
+      renderAll();
+    });
+
+    // Tempel mentah -> petakan ke form (format situs: Title, Score, Views, Episodes, Duration, Aired, Studio, tags, Synopsis, Episodes list)
+    // Kamus = semua genre di daftar.json + tambahan umum (tanpa fragmen rusak)
+    var KNOWN_TAGS = ['Action','Adventure','Ahegao','Anal','Angel','Animal Girls','Aunt','BBW','BDSM','Big Tits','Blackmail','Blonde','Blowjob','Bondage','Brainwashed','Brother','Bukakke','Bunny Girl','Cat Girl','Catgirl','Censored','Cheating','Childhood Friend','Classmate','Comedy','Condom','Cosplay','Cousin','Creampie','Cross-dressing','Cute & Funny','Dark Skin','Daughter','DeepThroat','Demon','Demon Girl','Demons','Doctor','Domination','Double Penetration','Drama','Dubbed','Ecchi','Elf','Facesitting','Facial','Family','Fantasy','Father','Female Doctor','Female Teacher','Femdom','Filmed','Footjob','Furry','Futanari','Gangbang','Glasses','Gyaru','Hand Job','Harem','Historical','Horny Slut','Horror','Housewife','Huge Breasts','Humiliation','Hypnosis','Incest','Inflation','Internal Cumshot','Kimono','Kouhai','Lactation','Large Breasts','Loli','Maid','Magical Girls','Masturbation','Mature','Megane','MILF','Mind Break','Mind Control','Molestation','Monster','Mother','Neighbor','NTR','Nuns','Nurse','Nurses','Office Ladies','Office Lady','Orc/Goblin','Orgy','POV','Pregnant','Princess','Public Sex','Rape','Rim job','Romance','Scat','School','School Girls','Schoolgirl','Senpai','Shimapan','Short','Shota','Shoutacon','Sister','Small Breasts','Small Tits','Sports','Squirting','Step Daughter','Step Mother','Step Sister','Stocking','Strap-on','Succubus','Super Power','Supernatural','Swimsuit','Teacher','Tentacle','Tentacles','Threesome','Tits Fuck','Toys','Train Molestation','Tsundere','Ugly Bastard','Uncensored','Uniform','Urination','Vampire','Vanilla','Virgin','Virgins','Widow','Womb Tattoo','X-Ray','Yuri'];
+    // Cocokkan semua kemunculan, yang panjang klaim duluan biar tidak dobel (Demons vs Demon)
+    function extractTags(blob) {
+      var low = String(blob).toLowerCase();
+      var cands = [];
+      KNOWN_TAGS.forEach(function (tag) {
+        var t = tag.toLowerCase();
+        var idx = low.indexOf(t);
+        while (idx !== -1) {
+          cands.push({ tag: tag, idx: idx, len: t.length });
+          idx = low.indexOf(t, idx + 1);
+        }
+      });
+      cands.sort(function (a, b) { return b.len - a.len || a.idx - b.idx; });
+      var used = [];
+      var out = [];
+      cands.forEach(function (c) {
+        for (var i = 0; i < used.length; i++) {
+          var u = used[i];
+          if (c.idx < u.end && (c.idx + c.len) > u.start) return;
+        }
+        used.push({ start: c.idx, end: c.idx + c.len });
+        out.push(c);
+      });
+      out.sort(function (a, b) { return a.idx - b.idx; });
+      var seen = {};
+      var res = [];
+      out.forEach(function (c) { if (!seen[c.tag]) { seen[c.tag] = 1; res.push(c.tag); } });
+      return res;
+    }
+    function parseRaw() {
+      var text = F('rawPaste').value || '';
+      var lines = text.split(/\r?\n/).map(function (s) { return s.trim(); });
+      var nonEmpty = lines.filter(function (s) { return s !== ''; });
+      if (!nonEmpty.length) { F('parseMsg').textContent = 'tempel dulu teks mentahnya'; return; }
+      function valAfter(label) {
+        for (var i = 0; i < lines.length; i++) {
+          if (lines[i].toLowerCase() === label.toLowerCase()) {
+            for (var j = i + 1; j < lines.length; j++) {
+              if (lines[j] !== '') return lines[j];
+            }
+          }
+        }
+        return '';
+      }
+      var title = nonEmpty[0].replace(/\s+OVA\s*$/i, ' OVA').trim();
+      var score = valAfter('Score');
+      if (!/^[\d.]+$/.test(score)) {
+        var mS = text.match(/Score\s*([\d.]+)/i);
+        if (mS) score = mS[1];
+      }
+      var episodes = valAfter('Episodes');
+      if (!/^\d+$/.test(episodes)) {
+        var mE = text.match(/Episodes\s*\(?(\d+)/i);
+        if (mE) episodes = mE[1]; else episodes = '';
+      }
+      var studio = valAfter('Studio');
+      var aired = valAfter('Aired');
+      // tanggal episode: Oct 02, 2025 -> min = first, max = last
+      var dateHits = [];
+      var mD = text.match(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2},?\s+\d{4}/gi);
+      if (mD) {
+        dateHits = mD.map(function (d) {
+          return d.replace(/\s+/g, ' ').replace(/(\w{3})[a-z]*\.?\s+(\d{1,2}),?\s+(\d{4})/i, function (_, mon, day, yr) {
+            return mon.charAt(0).toUpperCase() + mon.slice(1, 3).toLowerCase() + '. ' + parseInt(day, 10) + ', ' + yr;
+          });
+        });
+      }
+      // synopsis: setelah baris "Synopsis" sampai "Episodes (" / "Episode 1"
+      var syn = '';
+      var sIdx = -1;
+      for (var k = 0; k < lines.length; k++) {
+        if (lines[k].toLowerCase() === 'synopsis') { sIdx = k; break; }
+      }
+      if (sIdx !== -1) {
+        var parts = [];
+        for (var q = sIdx + 1; q < lines.length; q++) {
+          if (/^episodes?\s*\(\d+/i.test(lines[q]) || /^episode\s+\d/i.test(lines[q])) break;
+          parts.push(lines[q]);
+        }
+        syn = parts.join(' ').trim();
+      }
+      // tags: cari HANYA di baris sebelum Synopsis, pilih baris dengan match terbanyak
+      // (min 2 + rapat, biar kalimat sinopsis yg kebetulan ada kata genre tidak ikut)
+      var tags = [];
+      (function () {
+        var end = lines.length;
+        for (var i = 0; i < lines.length; i++) {
+          if (lines[i].toLowerCase() === 'synopsis') { end = i; break; }
+        }
+        var best = [], bestN = 0;
+        for (var k = 0; k < end; k++) {
+          var L = lines[k];
+          if (!L || L.length < 10) continue;
+          var sp = (L.match(/ /g) || []).length / L.length;
+          if (sp > 0.15) continue;
+          var tg = extractTags(L);
+          if (tg.length >= 2 && tg.length > bestN) { bestN = tg.length; best = tg; }
+        }
+        tags = best;
+      })();
+      // isi form
+      var fullTitle = title;
+      if (fullTitle && !/\[/.test(fullTitle)) fullTitle += ' [Sub-ENG]';
+      F('f_title').value = fullTitle;
+      F('f_link').value = (fullTitle.replace(/\s*\[Sub-ENG\]\s*/gi, '').trim() || title) + '.html';
+      linkTouched = true;
+      if (/^[\d.]+$/.test(score)) F('f_rating').value = score;
+      if (/^\d+$/.test(episodes)) F('f_episode').value = episodes;
+      if (studio) F('f_studio').value = studio;
+      if (dateHits.length) {
+        var sorted = dateHits.slice().sort(function (a, b) { return new Date(a) - new Date(b); });
+        F('f_first').value = sorted[0];
+        F('f_last').value = sorted[sorted.length - 1];
+      } else if (aired) {
+        F('f_first').value = aired;
+      }
+      if (tags.length) F('f_genre').value = tags.join(', ');
+      if (syn) F('f_sinopsis').value = syn;
+      F('parseMsg').textContent = 'terpetakan: ' + fullTitle + (tags.length ? ' | ' + tags.length + ' genre' : '') + (episodes ? ' | ' + episodes + ' eps' : '');
+      renderAll();
+    }
+    F('btnParse').addEventListener('click', parseRaw);
+
+    F('f_date').value = defaultDate();
+    loadFile();
+  </script>
+</body>
+
+</html>
