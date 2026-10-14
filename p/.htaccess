@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteBase /videohen/p/
+
+# Jangan rewrite file & folder asli (base.html, json, js, dll)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Sudah ada .html -> base.html?link=Nama.html (tanpa dobel, B=escape spasi)
+RewriteRule ^(.*)\.html$ base.html?link=$1.html [B,L,QSA]
+
+# Tanpa .html -> base.html?link=Nama.html (tambah .html otomatis)
+# Contoh: /p/Sister%20Breeder -> base.html?link=Sister%20Breeder.html
+RewriteRule ^(.*)$ base.html?link=$1.html [B,L,QSA]
