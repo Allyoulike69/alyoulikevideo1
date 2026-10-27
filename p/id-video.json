@@ -3922,6 +3922,15 @@
             "episodeImages": {
                 "0": "https://i.ibb.co.com/rGMj8fGd/Heartful-Maman-the-Animation-Vol-1-mp4-snapshot-21-19-2017-10-26-18-41-23-dtp1280x720sq80w-w300.webp"
             }
+        },
+        "Sare Tsuma wa Ubawaretai.html": {
+            "link": "Sare Tsuma wa Ubawaretai.html",
+            "videoIds": [
+                "DIQF6oxXO"
+            ],
+            "episodeImages": {
+                "0": "https://i.ibb.co.com/R47LCXbP/sare-tsuma-wa-ubawaretai-1-preview-183-dtp1280x720sq85w-w300.webp"
+            }
         }
     }
 }
