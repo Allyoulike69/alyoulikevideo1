@@ -4015,6 +4015,19 @@
                 "2": "https://i.ibb.co.com/Mkvc5WBG/jitakukeibiin12-dtp1280x720sq80w.webp",
                 "3": "https://i.ibb.co.com/84cmcFhT/Jitaku-Keibiin-Vol-4-mp4-snapshot-02-15-2017-09-29-02-44-42-dtp1280x720sq80w-w300.webp"
             }
+        },
+        "Pinkerton.html": {
+            "link": "Pinkerton.html",
+            "videoIds": [
+                "u6AcMgntF",
+                "f33wZY5Tj",
+                "5vTGH7Ces"
+            ],
+            "episodeImages": {
+                "0": "https://i.ibb.co.com/PGjgqQsW/pinkerton11-dtp1280x720sq80w-w300.webp",
+                "1": "https://i.ibb.co.com/rRMXsH6x/pinkerton12-dtp1280x720sq80w-w300.webp",
+                "2": "https://i.ibb.co.com/XfG0QtXc/pinkerton13-dtp1280x720sq80w-w300.webp"
+            }
         }
     }
 }
