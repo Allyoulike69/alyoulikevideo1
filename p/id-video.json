@@ -4063,6 +4063,15 @@
             "episodeImages": {
                 "0": "https://i.ibb.co.com/bRK7jqB0/Succuba-Mist-Story-The-Animation-01-mp4-snapshot-07-36-2017-10-04-17-47-03-dtp1280x720sq80w-w300.webp"
             }
+        },
+        "Kyonyuu Kazoku Saimin.html": {
+            "link": "Kyonyuu Kazoku Saimin.html",
+            "videoIds": [
+                "GsYoPFCwK"
+            ],
+            "episodeImages": {
+                "0": "https://i.ibb.co.com/hJHYmw31/kyonyuukazokusaimin11-dtp1280x720sq80w-w300.webp"
+            }
         }
     }
 }
