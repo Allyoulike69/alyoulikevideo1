@@ -4293,6 +4293,21 @@
                 "2": "https://i.ibb.co.com/hJN4Tryp/Jitaku-Keibiin-2019-03-mp4-snapshot-10-32-2019-07-27-21-52-17-dtp1280x720sq80w-w300.webp",
                 "3": "https://i.ibb.co.com/r2VDxbXn/Sakura-Circle-Jitaku-Keibiin-2019-04-DVD-720x480-h264-AAC-359-FB60-A-mkv-snapshot-04-06-2019-09-29-00.webp"
             }
+        },
+        "Rinkan Club.html": {
+            "link": "Rinkan Club.html",
+            "videoIds": [
+                "CJZ_D4jTH",
+                "WLaJWp7s2",
+                "39rZPLtqe",
+                "gSVpNJiNLW"
+            ],
+            "episodeImages": {
+                "0": "https://i.ibb.co.com/YBkszYP8/rinkanclub11-dtp1280x720sq80w-w300.webp",
+                "1": "https://i.ibb.co.com/0VY5C8RQ/rinkanclub12-dtp1280x720sq80w-w300.webp",
+                "2": "https://i.ibb.co.com/b5CyM8w8/rinkanclub13-dtp1280x720sq80w-w300.webp",
+                "3": "https://i.ibb.co.com/Vcs5jcRj/rinkanclub14-dtp1280x720sq80w-w300.webp"
+            }
         }
     }
 }
