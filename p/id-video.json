@@ -4378,6 +4378,21 @@
                 "0": "https://i.ibb.co.com/x88XLsFK/Sakura-Circle-Shoujo-Kyouiku-RE-01-DVD-720x480-h264-AAC-E20952-EB-mkv-snapshot-03-53-2019-07-05-22-12.webp",
                 "1": "https://i.ibb.co.com/spHqSdL4/Shoujo-Kyouiku-RE-02-mp4-snapshot-03-17-2019-09-06-05-26-10-dtp1280x720sq80w-w300.webp"
             }
+        },
+        "Ikkyuu Nyuukon.html": {
+            "link": "Ikkyuu Nyuukon.html",
+            "videoIds": [
+                "b19tYaqpT",
+                "eHxQXOOw5h",
+                "lAhfjddB1",
+                "N7hcVeaUp"
+            ],
+            "episodeImages": {
+                "0": "https://i.ibb.co.com/PZ7n1QDS/Ikkyuu-Nyuukon-Vol-1-mp4-snapshot-07-56-2017-10-19-22-01-25-dtp1280x720sq80w-w300.webp",
+                "1": "https://i.ibb.co.com/pvzWmrPN/Ikkyuu-Nyuukon-Vol-2-mp4-snapshot-08-18-2017-12-14-19-40-12-dtp1280x720sq80w-w300.webp",
+                "2": "https://i.ibb.co.com/TMCpKdWq/Ikkyuu-Nyuukon-Vol-3-mp4-snapshot-21-09-2018-03-16-04-58-03-dtp1280x720sq80w-w300.webp",
+                "3": "https://i.ibb.co.com/Ng5md7Vd/Ikkyuu-Nyuukon-ep-4-mp4-snapshot-04-31-2018-06-22-02-00-28-dtp1280x720sq80w-w300.webp"
+            }
         }
     }
 }
