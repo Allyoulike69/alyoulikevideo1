@@ -4393,6 +4393,17 @@
                 "2": "https://i.ibb.co.com/TMCpKdWq/Ikkyuu-Nyuukon-Vol-3-mp4-snapshot-21-09-2018-03-16-04-58-03-dtp1280x720sq80w-w300.webp",
                 "3": "https://i.ibb.co.com/Ng5md7Vd/Ikkyuu-Nyuukon-ep-4-mp4-snapshot-04-31-2018-06-22-02-00-28-dtp1280x720sq80w-w300.webp"
             }
+        },
+        "Shoujo Kyouiku.html": {
+            "link": "Shoujo Kyouiku.html",
+            "videoIds": [
+                "PUfclXUPZ",
+                "-JsRFJhTV"
+            ],
+            "episodeImages": {
+                "0": "https://i.ibb.co.com/ycR3Hzkf/shoujokyouiku11-dtp1280x720sq80w-w300.webp",
+                "1": "https://i.ibb.co.com/W4b65GD3/shoujokyouiku12-dtp1280x720sq80w-w300.webp"
+            }
         }
     }
 }
